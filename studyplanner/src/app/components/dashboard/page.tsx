@@ -9,10 +9,13 @@ const Dashboard = () => {
             <Link to="/">Dashboard</Link>
           </li>
           <li>
-            <Link to="./components/unitManagement/page">Unit Management</Link>
+            <Link to="/components/unitManagement">Unit Management</Link>
           </li>
           <li>
-            <Link to="./components/calendar/page">Calendar</Link>
+            <Link to="/components/calendar">Calendar</Link>
+          </li>
+          <li>
+            <Link to="/components/assessments">Assessments</Link>
           </li>
         </ul>
       </nav>
