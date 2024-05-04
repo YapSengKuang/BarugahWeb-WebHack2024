@@ -12,3 +12,6 @@
 // The home page should have a button in the top right to navigate to the user profile page -->
 // Thats all that we should need now for website requirements-->
 
+
+import React from 'react';
+
