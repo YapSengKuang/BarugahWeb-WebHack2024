@@ -1,0 +1,24 @@
+Tasks
+
+1. Create Welcome screen
+2. Create Unit management page
+3. Create Unit Assessments page
+4. Create Calendar page
+
+5. Use AI feature to create Calendar
+6. Use API to recommend Study playlist
+7. Generate practise test
+8. Link to resource study guide
+
+
+HIGH PRIO
+1. Create Welcome screen
+2. Create Unit management page
+3. Create Unit Assessments page
+4. Create Calendar page
+5. Use AI feature to create Calendar
+
+SMALL PRIO
+6. Use API to recommend Study playlist
+7. Generate practise test
+8. Link to resource study guide
