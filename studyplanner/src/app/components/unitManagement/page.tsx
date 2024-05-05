@@ -136,34 +136,47 @@ const Page: React.FC = () => {
           
         </div>
 
-        <div className="display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: 'repeat(2, 1fr)', gap: '10px', height: '100vh', width: '100vw'">
-        <button onClick={addUnit} className="px-2 py-1 text-sm font-bold title-font text-black-700 bg-indigo-500 rounded">
-          <span className = "icon">
-            <i className = 'bx bx-file-find'>Add Units</i>
-          </span>
-        </button>
-        </div>
+        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
 
-        <div>
-        {units.map(unit => (
-        <div className="py-8 flex flex-wrap md:flex-nowrap" key={unit.id}>
-          <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-            <span className="font-semibold title-font text-gray-700">{unit.name}</span>
-            <span className="mt-1 text-gray-500 text-sm">{unit.Semester}</span>
-          </div>
-          <div className="md:flex-grow">
-            <h2 className="text-2xl font-medium text-gray-900 title-font mb-2"></h2>
-            <p className="leading-relaxed"></p>
-            <a className="text-indigo-500 inline-flex items-center mt-4">Manage Assessments
-              <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h"></path>
-                <path d="M12 5l7 7-7 7"></path>
-              </svg>
+            <div className="display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: 'repeat(2, 1fr)', gap: '10px', height: '100vh', width: '100vw'">
+            {/* <button onClick={addUnit} className="px-2 py-1 text-sm font-bold title-font text-black-700 bg-indigo-500 rounded">
+              <span className = "icon">
+                <i className = 'bx bx-file-find'>Add Units</i>
+              </span>
+            </button> */}
+
+            <a 
+              onClick={addUnit}
+              
+              className=" text-white rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Add Units
             </a>
+            </div>
+
+            <div>
+            {units.map(unit => (
+              <div className="py-8 flex flex-wrap md:flex-nowrap" key={unit.id}>
+                <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                  <span className="font-semibold title-font text-white">{unit.name}</span>
+                  <span className="mt-1 text-white text-sm">{unit.Semester}</span>
+                </div>
+                <div className="md:flex-grow">
+                  <h2 className="text-2xl font-medium text-white title-font mb-2"></h2>
+                  <p className="leading-relaxed"></p>
+                  <a href='/components/assessments' className="text-indigo-500 inline-flex items-center mt-4">Manage Assessments
+                    <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+            </div>
+          ))}
+          </div>
           </div>
         </div>
-      ))}
-    </div>
         <div
           className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
           aria-hidden="true"
