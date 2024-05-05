@@ -21,6 +21,7 @@ import Calendar from './components/calendar/page';
 import Assessment from './components/assessments/page';
 import UnitManagement from './components/unitManagement/page';
 import ReactDOM, { createRoot } from "react-dom/client";
+import "./index.css"
 
 
 
@@ -41,7 +42,7 @@ const Navigation: React.FC = () => {
 export default function App() {
   return (
     <div>
-      <h1>Study Planner</h1>
+      
       <Navigation />
     </div>
   );

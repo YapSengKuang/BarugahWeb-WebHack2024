@@ -1,4 +1,5 @@
 import React from "react";
+//import 'BarugahWeb-WebHack2024/studyplanner/src/app/index.css';
 // Importing React from "react/jsx-runtime" for Next.js 11+
 // import React from "react/jsx-runtime";
 
