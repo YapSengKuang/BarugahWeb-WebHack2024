@@ -6,7 +6,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 interface Unit {
   id: number;
   name: string;
-  description: string;
+  Semester: string;
 }
 
 const navigation = [
@@ -17,17 +17,28 @@ const navigation = [
 ]
 
 const Page: React.FC = () => {
-  const [units, setUnits] = useState<Unit[]>([]);
+  const [units, setUnits] = useState<Unit[]>([
+    {
+      id: 1,
+      name: 'FIT2004 - Algorithms and data structures',
+      Semester: 'Semester 1 2024'
+    },
+    //
+  ]); 
 
   const addUnit = () => {
-    const newUnit: Unit = {
-      id: units.length + 1,
-      name: `Unit ${units.length + 1}`,
-      description: `Description for unit ${units.length + 1}`
-    };
-    setUnits([...units, newUnit]);
+    if (units.length < 5) {
+      const newUnit: Unit = {
+        id: units.length + 1,
+        name: `New Unit ${units.length + 1}`,
+        Semester: 'Semester 1 2024'
+      };
+      setUnits([...units, newUnit]);
+    } else {
+      alert('Maximum of 5 units reached');
+    }
   };
-  
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -122,66 +133,37 @@ const Page: React.FC = () => {
                 'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
             }}
           />
+          
         </div>
 
-
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: 'repeat(2, 1fr)', gap: '10px', height: '100vh', width: '100vw' }}>
-          <h1>Unit Management</h1>
-          <button onClick={addUnit}>Add Unit</button>
-          {units.map(unit => (
-            <div key={unit.id} style={{ border: '1px solid black', padding: '10px', borderRadius: '5px' }}>
-              <h2>{unit.name}</h2>
-              <p>{unit.description}</p>
-            </div>
-
-
-
-          ))}
-          {Array(4 - units.length).fill(null).map((_, index) => (
-            <div key={`placeholder-${index}`} style={{ border: '1px solid transparent' }} />
-          ))}
-
-        <section className="text-gray-600 body-font overflow-hidden">
-            <div className="container px-5 py-24 mx-auto">
-              <div className="-my-8 divide-y-2 divide-gray-100">
-                
-                <div className="py-8 flex flex-wrap md:flex-nowrap">
-                  <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                    <span className="font-semibold title-font text-gray-700">CATEGORY</span>
-                    <span className="mt-1 text-gray-500 text-sm">12 Jun 2019</span>
-                  </div>
-                  <div className="md:flex-grow">
-                    <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">Meditation bushwick direct trade taxidermy shaman</h2>
-                    <p className="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.</p>
-                    <a className="text-indigo-500 inline-flex items-center mt-4">Learn More
-                      <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14"></path>
-                        <path d="M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-                <div className="py-8 flex flex-wrap md:flex-nowrap">
-                  <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                    <span className="font-semibold title-font text-gray-700">CATEGORY</span>
-                    <span className="text-sm text-gray-500">12 Jun 2019</span>
-                  </div>
-                  <div className="md:flex-grow">
-                    <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">Woke master cleanse drinking vinegar salvia</h2>
-                    <p className="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.</p>
-                    <a className="text-indigo-500 inline-flex items-center mt-4">Learn More
-                      <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14"></path>
-                        <path d="M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
+        <div className="display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: 'repeat(2, 1fr)', gap: '10px', height: '100vh', width: '100vw'">
+        <button onClick={addUnit} className="px-2 py-1 text-sm font-bold title-font text-black-700 bg-indigo-500 rounded">
+          <span className = "icon">
+            <i className = 'bx bx-file-find'>Add Units</i>
+          </span>
+        </button>
         </div>
+
+        <div>
+        {units.map(unit => (
+        <div className="py-8 flex flex-wrap md:flex-nowrap" key={unit.id}>
+          <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+            <span className="font-semibold title-font text-gray-700">{unit.name}</span>
+            <span className="mt-1 text-gray-500 text-sm">{unit.Semester}</span>
+          </div>
+          <div className="md:flex-grow">
+            <h2 className="text-2xl font-medium text-gray-900 title-font mb-2"></h2>
+            <p className="leading-relaxed"></p>
+            <a className="text-indigo-500 inline-flex items-center mt-4">Manage Assessments
+              <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
         <div
           className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
           aria-hidden="true"
@@ -200,6 +182,7 @@ const Page: React.FC = () => {
 
   }
 
+export default Page
 
   
 
@@ -231,5 +214,3 @@ const Page: React.FC = () => {
 //     </div>
 //   );
 // }
-
-export default Page;
