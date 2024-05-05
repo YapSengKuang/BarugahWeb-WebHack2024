@@ -77,8 +77,7 @@ const assessments = [
     Type_of_Assessment: 'Assignment',
     imageUrl:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    dueDate: '24-5-2024',
-    type: "Code"
+    dueDate: '24-5-2024'
   },
   {
     id: '2',
@@ -89,8 +88,7 @@ const assessments = [
     Type_of_Assessment: 'Lab',
     imageUrl:
       'https://via.placeholder.com/256', // Placeholder image URL
-    dueDate: '12-6-2024',
-    type: "Presentation"
+    dueDate: '12-6-2024'
   },
   {
     id: '3',
@@ -101,8 +99,7 @@ const assessments = [
     Type_of_Assessment: 'Group Project',
     imageUrl:
       'https://via.placeholder.com/256', // Placeholder image URL
-    dueDate: '15-7-2024',
-    type: "Code"
+    dueDate: '15-7-2024'
   },
   {
     id: '4',
@@ -113,8 +110,7 @@ const assessments = [
     Type_of_Assessment: 'Assignment',
     imageUrl:
       'https://via.placeholder.com/256', // Placeholder image URL
-    dueDate: '30-6-2024',
-    type: "Essay"
+    dueDate: '30-6-2024'
   }
 ];
 
@@ -230,16 +226,16 @@ export default function Example() {
             {assessments.map((assignment) => (
               <li key={assignment.id} className="flex justify-between gap-x-6 py-5">
                 <div className="flex flex-col min-w-0 gap-y-1">
-                  <div className="min-w-0 flex-auto">
-                    <p className="text-sm font-semibold leading-6 text-white">{assignment.name}</p>
-                    <p className="text-xs leading-6 text-white">{assignment.percentage} %</p>
+                  <div className="min-w-0 flex-auto text-left">
+                    <p className="text-sm font-semibold leading-6 text-white">{assignment.name}</p>                    <p className="text-xs leading-6 text-white">{assignment.percentage} %</p>
                     <p className="text-xs leading-6 text-white">Type of Assessment: {assignment.Type_of_Assessment}</p>
                     <p className="text-xs leading-6 text-white">Topics: {assignment.topics}</p>
-                    <p className="text-xs leading-6 text-white">Description: {assignment.Description}</p>
+                    <p className="text-xs leading-6 text-white">Description: {assignment.Description}</p> 
                   </div>
                 <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
                   <p className="text-sm leading-6 text-white">{assignment.dueDate}</p>
-                  <p className='text-xs leading-6 text-white'>{assignment.type}</p>
+                  
+                </div>
                 </div>
               </li>
             ))}
