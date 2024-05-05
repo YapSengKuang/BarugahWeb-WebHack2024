@@ -156,14 +156,23 @@ const Page: React.FC = () => {
             </div>
 
             <div>
-            {units.map(unit => (
+            {units.map((unit, index) => (
               <div className="py-8 flex flex-wrap md:flex-nowrap" key={unit.id}>
                 <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                  <span className="font-semibold title-font text-white">{unit.name}</span>
-                  <span className="mt-1 text-white text-sm">{unit.Semester}</span>
+                  <input
+                    type="text"
+                    value={unit.name}
+                    onChange={(e) => {
+                      const newUnits = [...units];
+                      newUnits[index].name = e.target.value;
+                      setUnits(newUnits);
+                    }}
+                    className="font-semibold title-font text-gray-700 w-full"
+                  />
+                  <span className="mt-1 text-gray-500 text-sm">{unit.Semester}</span>
                 </div>
                 <div className="md:flex-grow">
-                  <h2 className="text-2xl font-medium text-white title-font mb-2"></h2>
+                  <h2 className="text-2xl font-medium text-gray-900 title-font mb-2"></h2>
                   <p className="leading-relaxed"></p>
                   <a href='/components/assessments' className="text-indigo-500 inline-flex items-center mt-4">Manage Assessments
                     <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -172,8 +181,8 @@ const Page: React.FC = () => {
                     </svg>
                   </a>
                 </div>
-            </div>
-          ))}
+              </div>
+            ))}
           </div>
           </div>
         </div>
