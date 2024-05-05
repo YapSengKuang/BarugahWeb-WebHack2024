@@ -77,18 +77,20 @@ const assessments = [
     Type_of_Assessment: 'Assignment',
     imageUrl:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    dueDate: '24-5-2024'
+    dueDate: '24-5-2024',
+    type: "Code"
   },
   {
     id: '2',
-    name: 'Another Assessment',
+    name: 'Tech Demo',
     percentage: '50',
     topics: 'Sorting, Graphs',
     Description: 'Implement a sorting algorithm and a graph traversal algorithm',
     Type_of_Assessment: 'Lab',
     imageUrl:
       'https://via.placeholder.com/256', // Placeholder image URL
-    dueDate: '12-6-2024'
+    dueDate: '12-6-2024',
+    type: "Presentation"
   },
   {
     id: '3',
@@ -99,7 +101,8 @@ const assessments = [
     Type_of_Assessment: 'Group Project',
     imageUrl:
       'https://via.placeholder.com/256', // Placeholder image URL
-    dueDate: '15-7-2024'
+    dueDate: '15-7-2024',
+    type: "Code"
   },
   {
     id: '4',
@@ -110,7 +113,8 @@ const assessments = [
     Type_of_Assessment: 'Assignment',
     imageUrl:
       'https://via.placeholder.com/256', // Placeholder image URL
-    dueDate: '30-6-2024'
+    dueDate: '30-6-2024',
+    type: "Essay"
   }
 ];
 
@@ -129,7 +133,7 @@ export default function Example() {
       <header className="absolute inset-x-0 top-0 z-50">
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="/components/dashboard" className="-m-1.5 p-1.5">
               <span className="sr-only">BarugahWeb</span>
               <img
                 className="h-8 w-auto"
@@ -141,7 +145,7 @@ export default function Example() {
           <div className="flex lg:hidden">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
@@ -150,7 +154,7 @@ export default function Example() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-white">
                 {item.name}
               </a>
             ))}
@@ -164,7 +168,7 @@ export default function Example() {
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
 
-              <a href="#" className="-m-1.5 p-1.5">
+              <a href="/components/dashboard" className="-m-1.5 p-1.5">
                 <span className="sr-only text-white">Barugah Web</span>
                 <img
                   className="h-8 w-auto"
@@ -225,7 +229,7 @@ export default function Example() {
           <ul role="list" className="divide-y divide-gray-100">
             {assessments.map((assignment) => (
               <li key={assignment.id} className="flex justify-between gap-x-6 py-5">
-                <div className="flex min-w-0 gap-x-4">
+                <div className="flex flex-col min-w-0 gap-y-1">
                   <div className="min-w-0 flex-auto">
                     <p className="text-sm font-semibold leading-6 text-white">{assignment.name}</p>
                     <p className="text-xs leading-6 text-white">{assignment.percentage} %</p>
@@ -233,13 +237,14 @@ export default function Example() {
                     <p className="text-xs leading-6 text-white">Topics: {assignment.topics}</p>
                     <p className="text-xs leading-6 text-white">Description: {assignment.Description}</p>
                   </div>
-                </div>
                 <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
                   <p className="text-sm leading-6 text-white">{assignment.dueDate}</p>
+                  <p className='text-xs leading-6 text-white'>{assignment.type}</p>
                 </div>
               </li>
             ))}
           </ul>
+
             
           </div>
         </div>
