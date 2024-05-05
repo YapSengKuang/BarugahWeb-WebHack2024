@@ -136,8 +136,8 @@ const Page: React.FC = () => {
           
         </div>
 
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+        <div className="mx-auto max-w-4xl py-2 sm:py-48 lg:py-56">
+          <div className="justify-stretch">
 
             <div className="display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: 'repeat(2, 1fr)', gap: '10px', height: '100vh', width: '100vw'">
             {/* <button onClick={addUnit} className="px-2 py-1 text-sm font-bold title-font text-black-700 bg-indigo-500 rounded">
@@ -157,9 +157,11 @@ const Page: React.FC = () => {
 
             <div>
             {units.map((unit, index) => (
-              <div className="py-8 flex flex-wrap md:flex-nowrap" key={unit.id}>
-                <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                  <input
+
+              
+              <div className="py-8 flex flex-col md:flex-nowrap" key={unit.id}>
+                <div>
+                <input
                     type="text"
                     value={unit.name}
                     onChange={(e) => {
@@ -167,12 +169,17 @@ const Page: React.FC = () => {
                       newUnits[index].name = e.target.value;
                       setUnits(newUnits);
                     }}
-                    className="font-semibold title-font text-gray-700 w-full"
+                    className="resize font-semibold title-font text-white w-full bg-transparent border-none"
                   />
+                </div>
+                
+                <div className = "flex justify-between flex-row ">
+                <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                  
                   <span className="mt-1 text-gray-500 text-sm">{unit.Semester}</span>
                 </div>
-                <div className="md:flex-grow">
-                  <h2 className="text-2xl font-medium text-gray-900 title-font mb-2"></h2>
+                <div className="">
+                  
                   <p className="leading-relaxed"></p>
                   <a href='/components/assessments' className="text-indigo-500 inline-flex items-center mt-4">Manage Assessments
                     <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -181,6 +188,9 @@ const Page: React.FC = () => {
                     </svg>
                   </a>
                 </div>
+                </div>
+
+                
               </div>
             ))}
           </div>
