@@ -30,8 +30,8 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Units', href: '#' },
-  { name: 'Calendar', href: '#' },
+  { name: 'Units', href: '/components/unitManagement' },
+  { name: 'Calendar', href: '/components/calendar' },
   { name: 'About', href: '#' }
 
 ]
@@ -143,12 +143,12 @@ const Dashboard = () => {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="#"
+                href="/components/unitManagement"
                 className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Units
               </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+              <a href="/components/calendar" className="text-sm font-semibold leading-6 text-gray-900">
                 Calendar <span aria-hidden="true">→</span>
               </a>
             </div>
