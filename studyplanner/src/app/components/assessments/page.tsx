@@ -72,6 +72,9 @@ const assessments = [
     id: '1',
     name: 'Pacman solver',
     percentage: '30',
+    topics: 'AI, Search',
+    Description: 'Implement a pacman solver using search algorithms',
+    Type_of_Assessment: 'Assignment',
     imageUrl:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     dueDate: '24-5-2024'
@@ -80,6 +83,9 @@ const assessments = [
     id: '2',
     name: 'Another Assessment',
     percentage: '50',
+    topics: 'Sorting, Graphs',
+    Description: 'Implement a sorting algorithm and a graph traversal algorithm',
+    Type_of_Assessment: 'Lab',
     imageUrl:
       'https://via.placeholder.com/256', // Placeholder image URL
     dueDate: '12-6-2024'
@@ -88,6 +94,9 @@ const assessments = [
     id: '3',
     name: 'Final Project',
     percentage: '75',
+    topics: 'Machine Learning, Neural Networks',
+    Description: 'Implement a machine learning model using neural networks',
+    Type_of_Assessment: 'Group Project',
     imageUrl:
       'https://via.placeholder.com/256', // Placeholder image URL
     dueDate: '15-7-2024'
@@ -96,6 +105,9 @@ const assessments = [
     id: '4',
     name: 'Essay Assignment',
     percentage: '20',
+    topics: 'Writing, Research',
+    Description: 'Write an essay on a topic of your choice',
+    Type_of_Assessment: 'Assignment',
     imageUrl:
       'https://via.placeholder.com/256', // Placeholder image URL
     dueDate: '30-6-2024'
@@ -217,6 +229,9 @@ export default function Example() {
                   <div className="min-w-0 flex-auto">
                     <p className="text-sm font-semibold leading-6 text-white">{assignment.name}</p>
                     <p className="text-xs leading-6 text-white">{assignment.percentage} %</p>
+                    <p className="text-xs leading-6 text-white">Type of Assessment: {assignment.Type_of_Assessment}</p>
+                    <p className="text-xs leading-6 text-white">Topics: {assignment.topics}</p>
+                    <p className="text-xs leading-6 text-white">Description: {assignment.Description}</p>
                   </div>
                 </div>
                 <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
