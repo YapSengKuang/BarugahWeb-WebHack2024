@@ -1,13 +1,8 @@
 "use client";
-import React, { useState } from 'react';
+
+import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-
-interface Unit {
-  id: number;
-  name: string;
-  Semester: string;
-}
 
 const navigation = [
   { name: 'Units', href: '/components/unitManagement' },
@@ -16,29 +11,7 @@ const navigation = [
 
 ]
 
-const Page: React.FC = () => {
-  const [units, setUnits] = useState<Unit[]>([
-    {
-      id: 1,
-      name: 'FIT2004 - Algorithms and data structures',
-      Semester: 'Semester 1 2024'
-    },
-    //
-  ]); 
-
-  const addUnit = () => {
-    if (units.length < 5) {
-      const newUnit: Unit = {
-        id: units.length + 1,
-        name: `New Unit ${units.length + 1}`,
-        Semester: 'Semester 1 2024'
-      };
-      setUnits([...units, newUnit]);
-    } else {
-      alert('Maximum of 5 units reached');
-    }
-  };
-
+const Dashboard = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -46,7 +19,7 @@ const Page: React.FC = () => {
       <header className="absolute inset-x-0 top-0 z-50">
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="/components/dashboard" className="-m-1.5 p-1.5">
               <span className="sr-only">BarugahWeb</span>
               <img
                 className="h-8 w-auto"
@@ -81,7 +54,7 @@ const Page: React.FC = () => {
           <Dialog.Panel className="text-white fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
 
-              <a href="#" className="-m-1.5 p-1.5">
+              <a href="/components/dashboard" className="-m-1.5 p-1.5">
                 <span className="sr-only text-white">Barugah Web</span>
                 <img
                   className="h-8 w-auto"
@@ -133,48 +106,27 @@ const Page: React.FC = () => {
                 'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
             }}
           />
-          
         </div>
-
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-
-            <div className="display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: 'repeat(2, 1fr)', gap: '10px', height: '100vh', width: '100vw'">
-            {/* <button onClick={addUnit} className="px-2 py-1 text-sm font-bold title-font text-black-700 bg-indigo-500 rounded">
-              <span className = "icon">
-                <i className = 'bx bx-file-find'>Add Units</i>
-              </span>
-            </button> */}
-
-            <a 
-              onClick={addUnit}
-              
-              className=" text-white rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Add Units
-            </a>
-            </div>
-
-            <div>
-            {units.map(unit => (
-              <div className="py-8 flex flex-wrap md:flex-nowrap" key={unit.id}>
-                <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                  <span className="font-semibold title-font text-white">{unit.name}</span>
-                  <span className="mt-1 text-white text-sm">{unit.Semester}</span>
-                </div>
-                <div className="md:flex-grow">
-                  <h2 className="text-2xl font-medium text-white title-font mb-2"></h2>
-                  <p className="leading-relaxed"></p>
-                  <a href='/components/assessments' className="text-indigo-500 inline-flex items-center mt-4">Manage Assessments
-                    <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M5 12h"></path>
-                      <path d="M12 5l7 7-7 7"></path>
-                    </svg>
-                  </a>
-                </div>
-            </div>
-          ))}
+            
           </div>
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl text-white">
+              About
+            </h1>
+            <p className="text-justify mt-6 text-lg leading-8  text-white">
+             SK and Justin envisioned a tool that could revolutionize how students manage their study schedules. With their combined expertise in software development and passion for education, they embarked on a journey to create BarugahWeb's studyplanner. From the initial brainstorming sessions to late-night coding marathons, they poured their hearts and souls into crafting a platform that would empower learners worldwide.
+
+Their vision was simple yet ambitious: to provide students with a comprehensive study planner that not only organized their academic commitments but also tailored study schedules to their individual learning styles and goals. They wanted to eliminate the stress and overwhelm often associated with managing coursework, exams, and extracurricular activities, allowing students to focus more on learning and personal growth.
+
+As they worked tirelessly on the project, SK and Justin faced numerous challenges and setbacks. But their determination never wavered. They drew inspiration from their own experiences as students, remembering the struggles they encountered and the tools they wished they had. This drove them to push through obstacles and innovate, constantly refining and enhancing the studyplanner to meet the evolving needs of its users.
+
+After months of development and testing, BarugahWeb's studyplanner was finally ready for launch. The response was overwhelming as students embraced the platform with open arms. They marveled at its intuitive interface, customizable features, and intelligent algorithms that generated personalized study plans tailored to each user's preferences and academic requirements.
+
+SK and Justin watched with pride as their creation made a positive impact on the lives of students around the globe. What started as a simple idea had blossomed into a transformative tool, empowering learners to take control of their education and achieve their full potential. As they reflected on their journey, they knew that this was just the beginning. With passion, perseverance, and a commitment to excellence, they were ready to continue pushing the boundaries of educational technology, inspiring future generations to dream big and pursue their passions.
+            </p>
+            
           </div>
         </div>
         <div
@@ -191,39 +143,8 @@ const Page: React.FC = () => {
         </div>
       </div>
     </div>
-    )
+  )
+}
 
-  }
 
-export default Page
-
-  
-
-// const Calendar: React.FC = () => {
-//   const [units, setUnits] = useState<Unit[]>([]);
-
-//   const addUnit = () => {
-//     const newUnit: Unit = {
-//       id: units.length + 1,
-//       name: `Unit ${units.length + 1}`,
-//       description: `Description for unit ${units.length + 1}`
-//     };
-//     setUnits([...units, newUnit]);
-//   };
-
-//   return (
-//     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: 'repeat(2, 1fr)', gap: '10px', height: '100vh', width: '100vw' }}>
-//       <h1>Unit Management</h1>
-//       <button onClick={addUnit}>Add Unit</button>
-//       {units.map(unit => (
-//         <div key={unit.id} style={{ border: '1px solid black', padding: '10px', borderRadius: '5px' }}>
-//           <h2>{unit.name}</h2>
-//           <p>{unit.description}</p>
-//         </div>
-//       ))}
-//       {Array(4 - units.length).fill(null).map((_, index) => (
-//         <div key={`placeholder-${index}`} style={{ border: '1px solid transparent' }} />
-//       ))}
-//     </div>
-//   );
-// }
+export default Dashboard;

@@ -117,7 +117,7 @@ const assessments = [
 const navigation = [
   { name: 'Units', href: '/components/unitManagement' },
   { name: 'Calendar', href: '/components/calendar' },
-  { name: 'About', href: '/components/assessments' }
+  { name: 'About', href: '/components/about' }
 
 ]
 
