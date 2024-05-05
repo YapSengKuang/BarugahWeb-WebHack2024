@@ -209,7 +209,7 @@ let calendar = (
                 <div className="bottom flex-grow h-30 py-1 w-full cursor-pointer">
                 <div className="event bg-purple-400 text-white rounded p-1 text-sm mb-1">
                     <span className="event-name">
-                      Meating
+                    FIT1008 Group Meeting
                     </span>
                     <br />
                     <span className="time">
@@ -218,7 +218,7 @@ let calendar = (
                   </div>
                   <div className="event bg-orange-400 text-white rounded p-1 text-sm mb-1">
                     <span className="event-name">
-                      Meating
+                      FIT1043
                     </span>
                     <br />
                     <span className="time">
@@ -239,7 +239,7 @@ let calendar = (
                   <div className="event bg-green-400 text-white rounded p-1 text-sm mb-1">
                   
                     <span className="event-name">
-                      UNIT3
+                      FIT2004
                     </span>
                     <br />
                     <span className="time">
@@ -248,7 +248,7 @@ let calendar = (
                   </div>
                   <div className="event bg-blue-400 text-white rounded p-1 text-sm mb-1">
                     <span className="event-name">
-                      UNIT4
+                      FIT2094
                     </span>
                     <br />
                     <span className="time">
@@ -312,7 +312,7 @@ let calendar = (
                 <div className="bottom flex-grow h-30 py-1 w-full cursor-pointer">
                 <div className="event bg-purple-400 text-white rounded p-1 text-sm mb-1">
                     <span className="event-name">
-                      Meating
+                    FIT1008 Group Meeting
                     </span>
                     <br />
                     <span className="time">
@@ -321,7 +321,7 @@ let calendar = (
                   </div>
                   <div className="event bg-orange-400 text-white rounded p-1 text-sm mb-1">
                     <span className="event-name">
-                      Meating
+                    FIT1043
                     </span>
                     <br />
                     <span className="time">
@@ -342,7 +342,7 @@ let calendar = (
                   <div className="event bg-green-400 text-white rounded p-1 text-sm mb-1">
                     
                     <span className="event-name">
-                      UNIT3
+                      FIT2004
                     </span>
                     <br />
                     <span className="time">
@@ -351,7 +351,7 @@ let calendar = (
                   </div>
                   <div className="event bg-blue-400 text-white rounded p-1 text-sm mb-1">
                     <span className="event-name">
-                      UNIT4
+                      FIT2094
                     </span>
                     <br />
                     <span className="time">
@@ -380,11 +380,24 @@ let calendar = (
               </div>
             </td>
             <td className="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-auto transition cursor-pointer duration-500 ease hover:bg-gray-300">
-              <div className="flex flex-col h-40 mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
+            <div className="flex flex-col h-40 mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
                 <div className="top h-5 w-full">
-                  <span className="text-gray-500">15</span>
+                  <span className="text-gray-500">12</span>
                 </div>
-                <div className="bottom flex-grow h-30 py-1 w-full cursor-pointer"></div>
+                <div className="bottom flex-grow h-30 py-1 w-full cursor-pointer">
+
+
+                  <div className="event bg-purple-400 text-white rounded p-1 text-sm mb-1">
+                    
+                    <span className="event-name">
+                      FIT1008 Test
+                    </span>
+                    <br />
+                    <span className="time">
+                      12:00~14:00
+                    </span>
+                  </div>
+                </div>
               </div>
             </td>
             <td className="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-auto transition cursor-pointer duration-500 ease hover:bg-gray-300">
@@ -414,7 +427,7 @@ let calendar = (
                 <div className="bottom flex-grow h-30 py-1 w-full cursor-pointer">
                 <div className="event bg-purple-400 text-white rounded p-1 text-sm mb-1">
                     <span className="event-name">
-                      Meating
+                    FIT1008 Group Meeting
                     </span>
                     <br />
                     <span className="time">
@@ -423,7 +436,7 @@ let calendar = (
                   </div>
                   <div className="event bg-orange-400 text-white rounded p-1 text-sm mb-1">
                     <span className="event-name">
-                      Meating
+                    FIT1043
                     </span>
                     <br />
                     <span className="time">
@@ -443,7 +456,7 @@ let calendar = (
                 <div className="event bg-green-400 text-white rounded p-1 text-sm mb-1">
                     
                     <span className="event-name">
-                      UNIT3
+                      FIT2004
                     </span>
                     <br />
                     <span className="time">
@@ -452,7 +465,7 @@ let calendar = (
                   </div>
                   <div className="event bg-blue-400 text-white rounded p-1 text-sm mb-1">
                     <span className="event-name">
-                      UNIT4
+                      FIT2094
                     </span>
                     <br />
                     <span className="time">
@@ -467,7 +480,18 @@ let calendar = (
                 <div className="top h-5 w-full">
                   <span className="text-gray-500">19</span>
                 </div>
-                <div className="bottom flex-grow h-30 py-1 w-full cursor-pointer"></div>
+                <div className="bottom flex-grow h-30 py-1 w-full cursor-pointer">
+                <div className="event bg-red-400 text-white rounded p-1 text-sm mb-1">
+                    
+                    <span className="event-name">
+                      Appointment
+                    </span>
+                    <br />
+                    <span className="time">
+                      12:30~13:30
+                    </span>
+                  </div>
+                </div>
               </div>
             </td>
             <td className="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-auto transition cursor-pointer duration-500 ease hover:bg-gray-300">
@@ -476,7 +500,26 @@ let calendar = (
                   <span className="text-gray-500">20</span>
                 </div>
                 <div className="bottom flex-grow h-30 py-1 w-full cursor-pointer"></div>
-              </div>
+                <div className="event bg-blue-400 text-white rounded p-1 text-sm mb-1">
+                    
+                    <span className="event-name">
+                      FIT2094
+                    </span>
+                    <br />
+                    <span className="time">
+                      12:00~14:00
+                    </span>
+                  </div>
+                  <div className="event bg-orange-400 text-white rounded p-1 text-sm mb-1">
+                    <span className="event-name">
+                      FIT1043 Evaluation
+                    </span>
+                    <br />
+                    <span className="time">
+                      18:00~20:00
+                    </span>
+                  </div>
+                </div>
             </td>
             <td className="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-auto transition cursor-pointer duration-500 ease hover:bg-gray-300">
               <div className="flex flex-col h-40 mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
@@ -515,7 +558,7 @@ let calendar = (
                 <div className="bottom flex-grow h-30 py-1 w-full cursor-pointer">
                 <div className="event bg-purple-400 text-white rounded p-1 text-sm mb-1">
                     <span className="event-name">
-                      Meating
+                      FIT1008 Group Meeting
                     </span>
                     <br />
                     <span className="time">
@@ -524,7 +567,7 @@ let calendar = (
                   </div>
                   <div className="event bg-orange-400 text-white rounded p-1 text-sm mb-1">
                     <span className="event-name">
-                      Meating
+                    FIT1043
                     </span>
                     <br />
                     <span className="time">
@@ -543,7 +586,7 @@ let calendar = (
                 <div className="event bg-green-400 text-white rounded p-1 text-sm mb-1">
                     
                     <span className="event-name">
-                      UNIT3
+                      FIT2004
                     </span>
                     <br />
                     <span className="time">
@@ -552,7 +595,7 @@ let calendar = (
                   </div>
                   <div className="event bg-blue-400 text-white rounded p-1 text-sm mb-1">
                     <span className="event-name">
-                      UNIT4
+                      FIT2094
                     </span>
                     <br />
                     <span className="time">
@@ -567,7 +610,18 @@ let calendar = (
                 <div className="top h-5 w-full">
                   <span className="text-gray-500">26</span>
                 </div>
-                <div className="bottom flex-grow h-30 py-1 w-full cursor-pointer"></div>
+                <div className="bottom flex-grow h-35 py-1 w-full cursor-pointer">
+                <div className="event bg-green-400 text-white rounded p-1 text-sm mb-1">
+                    
+                    <span className="event-name">
+                      FIT2004 EXAM
+                    </span>
+                    <br />
+                    <span className="time">
+                      12:00~14:00
+                    </span>
+                  </div>
+                </div>
               </div>
             </td>
             <td className="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-auto transition cursor-pointer duration-500 ease hover:bg-gray-300">
@@ -615,7 +669,7 @@ let calendar = (
                 <div className="bottom flex-grow h-30 py-1 w-full cursor-pointer">
                 <div className="event bg-purple-400 text-white rounded p-1 text-sm mb-1">
                     <span className="event-name">
-                      Meating
+                    FIT1008 Group Meeting
                     </span>
                     <br />
                     <span className="time">
@@ -624,7 +678,7 @@ let calendar = (
                   </div>
                   <div className="event bg-orange-400 text-white rounded p-1 text-sm mb-1">
                     <span className="event-name">
-                      Meating
+                    FIT1043
                     </span>
                     <br />
                     <span className="time">
@@ -644,7 +698,7 @@ let calendar = (
                 <div className="event bg-green-400 text-white rounded p-1 text-sm mb-1">
                     
                     <span className="event-name">
-                      UNIT3
+                      FIT2004
                     </span>
                     <br />
                     <span className="time">
@@ -653,7 +707,7 @@ let calendar = (
                   </div>
                   <div className="event bg-blue-400 text-white rounded p-1 text-sm mb-1">
                     <span className="event-name">
-                      UNIT4
+                      FIT2094
                     </span>
                     <br />
                     <span className="time">
