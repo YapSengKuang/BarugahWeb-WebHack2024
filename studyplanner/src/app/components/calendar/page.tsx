@@ -507,7 +507,7 @@ let calendar = (
                     </span>
                     <br />
                     <span className="time">
-                      12:00~14:00
+                      17:00~19:00
                     </span>
                   </div>
                   <div className="event bg-orange-400 text-white rounded p-1 text-sm mb-1">
@@ -516,7 +516,7 @@ let calendar = (
                     </span>
                     <br />
                     <span className="time">
-                      18:00~20:00
+                      19:00~21:00
                     </span>
                   </div>
                 </div>
