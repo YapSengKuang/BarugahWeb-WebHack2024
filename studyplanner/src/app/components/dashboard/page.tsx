@@ -1,30 +1,5 @@
 "use client";
 
-// const Dashboard = () => {
-//   return (
-//     <>
-//       <nav>
-//         <ul>
-//           <li>
-//             <Link to="/">Dashboard</Link>
-//           </li>
-//           <li>
-//             <Link to="/components/unitManagement">Unit Management</Link>
-//           </li>
-//           <li>
-//             <Link to="/components/calendar">Calendar</Link>
-//           </li>
-//           <li>
-//             <Link to="/components/assessments">Assessments</Link>
-//           </li>
-//         </ul>
-//       </nav>
-
-//       <Outlet />
-//     </>
-//   )
-// };
-// import "BarugahWeb-WebHack2024/studyplanner/src/app/index.css"
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -32,7 +7,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 const navigation = [
   { name: 'Units', href: '/components/unitManagement' },
   { name: 'Calendar', href: '/components/calendar' },
-  { name: 'About', href: '#' }
+  { name: 'About', href: '/components/assessments' }
 
 ]
 
